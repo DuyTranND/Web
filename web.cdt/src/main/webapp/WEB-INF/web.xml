@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <!-- Servlet Configuration -->
+    <servlet>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>web.controler.Login_controller</servlet-class>
+</servlet>
+
+<servlet>
+    <servlet-name>RegisterController</servlet-name>
+    <servlet-class>web.controler.Register_controller</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/login</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>RegisterController</servlet-name>
+    <url-pattern>/register</url-pattern>
+</servlet-mapping>
+
+
+    <!-- Welcome File List -->
+    <welcome-file-list>
+        <welcome-file>register_form.html</welcome-file>
+        <welcome-file>login_form.html</welcome-file>
+        <welcome-file>home_page.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
